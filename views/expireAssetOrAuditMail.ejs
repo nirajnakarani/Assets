@@ -1,0 +1,230 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #1a73e8;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .asset-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            table-layout: fixed;
+            /* Ensures that the table does not overflow */
+        }
+
+        .asset-table th,
+        .asset-table td {
+            padding: 10px;
+            border: 1px solid #dddddd;
+            text-align: left;
+            font-size: 14px;
+            word-wrap: break-word;
+            /* Prevents overflow of text */
+            overflow: hidden;
+            /* Ensures content stays within the cell */
+        }
+
+        .asset-table th {
+            background-color: #f1f1f1;
+            color: #333333;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888888;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .email-container {
+                padding: 10px;
+            }
+
+            .asset-table th,
+            .asset-table td {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <h2>Today's <%if(operation=="expire"){%>Expiring<%}else{%>Audit<%}%> Assets</h2>
+        <h3>Hello, <%= user?.name %>
+        </h3>
+        <h4>The following assets are <%if(operation=="expire"){%>expiring<%}else{%>audit<%}%> today:</h4>
+
+        <table class="asset-table">
+            <thead>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Asset ID</th>
+                    <th>
+                        <%if(operation=="expire"){%>Warranty Expiry Date<%}else{%>Last Audit Date<%}%>
+                    </th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% assets.forEach(function(asset) { %>
+                    <tr>
+                        <td>
+                            <%= asset?.name || "-" %>
+                        </td>
+                        <td>
+                            <%= asset?.assetId || "-" %>
+                        </td>
+                        <td>
+                            <%if(operation=="expire"){%>
+                                <%= asset?.expireDateWarranty %>
+                                    <%}else{%>
+                                        <%= asset?.lastAuditDate %>
+                            <%}%>
+                        </td>
+                        <td>
+                            <%= asset?.location?.name || "-" %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+
+        <p>Thank you for your attention.</p>
+
+        <div class="footer">
+            &copy; 2024 Asset Management System
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%if(operation=="expire"){%>Asset Expiration!<%}else{%>Audit Reminder<%}%></title>
+</head>
+
+<body style="font-family: 'Roboto,RobotoDraft,Helvetica,Arial,sans-serif', Arial, sans-serif; background: #E5E5E5; margin: 0;">
+    <div style="background: #E5E5E5; padding: 50px 15px;">
+        <table style="max-width: 700px; width: 100%; margin: auto; border-top: 4px solid #FFA700; border-spacing: 0; background: #FFF;">
+            <!-- Header Section -->
+            <tr>
+                <td style="padding: 10px 20px; background: #fff;">
+                    <table style="width: 100%; border-bottom: 1px solid #EBECF2; padding-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <h2 style="font-size: 18px; font-weight: bold; color: #1E2538; margin: 0;">Asset Management System</h2>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Hero Section -->
+            <tr>
+                <td style="height: 110px; background-image: url('https://assets.ubsapp.com/emails/Invitation-bg.png'); background-repeat: no-repeat; background-size: cover; background-color: #1E2538;">
+                    <h2 style="font-size: 30px; color: #FFFFFF; text-align: center; margin: 0;">
+                        <%if(operation=="expire"){%>Asset Expiration!<%}else{%>Audit Reminder<%}%>
+                    </h2>
+                </td>
+            </tr>
+
+            <!-- Content Section -->
+            <tr>
+                <td style="padding: 20px;">
+                    <h2 style="font-size: 16px; font-weight: 600; color: #1E2538; margin-bottom: 10px;">Hello <%= user?.name %>,</h2>
+                    <p style="font-size: 14px; color: #73788B;">The following assets are <%if(operation=="expire"){%>expiring<%}else{%>due for audit<%}%> today:</p>
+
+                    <!-- Asset Table -->
+                    <table style="width: 100%; border: 1px solid #E8EAF2; border-spacing: 0; margin-top: 20px;">
+                        <thead style="background: #FAFAFB;">
+                            <tr>
+                                <th style="padding: 10px; text-align: left; font-weight: 600; color: #1e2538;">Asset Name</th>
+                                <th style="padding: 10px; text-align: left; font-weight: 600; color: #1e2538;">Asset ID</th>
+                                <th style="padding: 10px; text-align: left; font-weight: 600; color: #1e2538;">
+                                    <%if(operation=="expire"){%>Expiry Date<%}else{%>Last Audit Date<%}%>
+                                </th>
+                                <th style="padding: 10px; text-align: left; font-weight: 600; color: #1e2538;">Location</th>
+                            </tr>
+                        </thead>
+                        <!-- Scrollable Tbody -->
+                        <tbody>
+                            <!-- <div style="max-height: 200px; overflow-y: auto; display: block;"> -->
+                                <% assets.forEach(function(asset) { %>
+                                    <tr>
+                                        <td style="padding: 10px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);"><%= asset?.name || "-" %></td>
+                                        <td style="padding: 10px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);"><%= asset?.assetId || "-" %></td>
+                                        <td style="padding: 10px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                            <%if(operation=="expire"){%>
+                                                <%= asset?.expireDateWarranty %>
+                                            <%}else{%>
+                                                <%= asset?.lastAuditDate %>
+                                            <%}%>
+                                        </td>
+                                        <td style="padding: 10px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);"><%= asset?.location?.name || "-" %></td>
+                                    </tr>
+                                <% }); %>
+                            <!-- </div> -->
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 14px; color: #73788B; margin-top: 20px;">Thank you for your attention.</p>
+                </td>
+            </tr>
+
+            <!-- Footer Section -->
+            <tr>
+                <td style="padding: 20px; text-align: center; font-size: 12px; color: #888888;">
+                    &copy; 2020-<%= new Date().getFullYear() %> Asset Management System. Please do not reply to this email.
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

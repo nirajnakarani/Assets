@@ -1,0 +1,839 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+
+        .asset-details {
+            margin-bottom: 20px;
+        }
+
+        .asset-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .asset-details th,
+        .asset-details td {
+            padding: 8px 12px;
+            border: 1px solid #dddddd;
+        }
+
+        .asset-details th {
+            background-color: #f1f1f1;
+            text-align: left;
+        }
+
+        .asset-details td {
+            background-color: #fafafa;
+        }
+
+        .files-section {
+            margin-top: 20px;
+        }
+
+        .files-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .preview {
+            display: flex;
+            justify-content: center;
+        }
+
+        .preview img {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Asset Assignment Notification</h2>
+        <p>Hello,</p>
+        <p>The following asset has been assigned to you:</p>
+
+        <div class="asset-details">
+            <table>
+                <tr>
+                    <th>Asset Name</th>
+                    <td>Monitor</td>
+                </tr>
+                <tr>
+                    <th>Asset ID</th>
+                    <td>MON005</td>
+                </tr>
+                <tr>
+                    <th>Category</th>
+                    <td>6687c4cf3d585246d8381d94</td>
+                </tr>
+                <tr>
+                    <th>Vendor</th>
+                    <td>66d1bf8a6663fa6e5b87c1a4</td>
+                </tr>
+                <tr>
+                    <th>Purchased On</th>
+                    <td>January 20, 1970</td>
+                </tr>
+                <tr>
+                    <th>Serial Number</th>
+                    <td>Not Available</td>
+                </tr>
+                <tr>
+                    <th>Warranty Expiry Date</th>
+                    <td>Not Set</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <th>Location</th>
+                    <td>6687b577820526f8fee9253d</td>
+                </tr>
+                <tr>
+                    <th>Condition</th>
+                    <td>6687ec065841664411c3aa1f</td>
+                </tr>
+                <tr>
+                    <th>Assigned At</th>
+                    <td>September 2, 2024, 11:08 AM</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="files-section">
+            <h3>Attached Files</h3>
+            <p>The following files are attached to this asset:</p>
+            <ul>
+                <li><strong>images (2).jpg</strong> (4 KB)</li>
+                <li><strong>images (1).jpg</strong> (3.6 KB)</li>
+            </ul>
+
+            <p>Preview:</p>
+            <div class="preview">
+                <img src="cid:image1" alt="images (2).jpg">
+                <img src="cid:image2" alt="images (1).jpg">
+            </div>
+        </div>
+
+        <p>Thank you for your attention.</p>
+
+        <div class="footer">
+            <p>&copy; 2024 Asset Management System</p>
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+
+        .asset-details {
+            margin-bottom: 20px;
+        }
+
+        .asset-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .asset-details th,
+        .asset-details td {
+            padding: 8px 12px;
+            border: 1px solid #dddddd;
+        }
+
+        .asset-details th {
+            background-color: #f1f1f1;
+            text-align: left;
+        }
+
+        .asset-details td {
+            background-color: #fafafa;
+        }
+
+        .files-section {
+            margin-top: 20px;
+        }
+
+        .files-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .preview {
+            display: flex;
+            justify-content: center;
+        }
+
+        .preview img {
+            margin: 0 auto;
+        }
+
+        .status-available {
+            /* background-color: lightgreen; */
+            color: #60b158;
+        }
+
+        .status-assigned {
+            /* background-color: lightyellow; */
+            color: #ffa700;
+        }
+
+        .status-unavailable {
+            /* background-color: lightcoral; */
+            color: #ff6961;
+        }
+
+        .status-associate {
+            /* background-color: lightblue; */
+            color: #007aff;
+        }
+
+        .tag-container {
+            display: flex;
+            align-items: center;
+            height: auto;
+        }
+
+        .tag-round {
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: <%=asset?.tag?.color %>;
+        }
+
+        .tag-text {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <% if (operation==='add' ) { %>
+                Asset Added Notification
+                <% } else if (operation==='update' ) { %>
+                    Asset Updated Notification
+                    <% } else if (operation==='assign' ) { %>
+                        Asset Assignment Notification
+                        <% } else { %>
+                            Asset Notification
+                            <% } %>
+        </h2>
+        <h3>Hello,</h3>
+
+        <% if (operation==='assign' ) { %>
+            <h4>The following asset has been assigned to you:</h4>
+            <% } else if (operation==='add' ) { %>
+                <h4>The following asset has been added to the system:</h4>
+                <% } else if (operation==='update' ) { %>
+                    <h4>The following asset has been updated:</h4>
+                    <% } %>
+
+                        <div class="asset-details">
+                            <table>
+                                <tr>
+                                    <th>Asset Name</th>
+                                    <td>
+                                        <%= asset?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Asset ID</th>
+                                    <td>
+                                        <%= asset?.assetId|| "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Category</th>
+                                    <td>
+                                        <% if(asset?.category){ %>
+                                            <span>
+                                                <i class="fas fa-desktop"
+                                                    style="color: #1d873f; margin-right: 5px;"></i>
+                                                <span>
+                                                    <%= asset?.category?.name %>
+                                                </span>
+                                            </span>
+                                            <% }else{ %>
+                                                -
+                                                <% } %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Vendor</th>
+                                    <td>
+                                        <%= asset?.vendor?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Purchased On</th>
+                                    <td>
+                                        <%= asset?.purchasedOn || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Serial Number</th>
+                                    <td>
+                                        <%= asset?.serialNumber || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Warranty Expiry Date</th>
+                                    <td>
+                                        <%= asset?.warrantyExpiryDate || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Expire Warranty Notify</th>
+                                    <td>
+                                        <%= asset?.expireWarrantyNotify || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Price</th>
+                                    <td>
+                                        <%if(asset?.price){ %>
+                                            ₹<%=asset?.price %>
+                                                <% } else{ %>
+                                                    -
+                                                    <%} %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Location</th>
+                                    <td>
+                                        <%= asset?.location?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Condition</th>
+                                    <td>
+                                        <%= asset?.condition?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Tag</th>
+                                    <td>
+                                        <%if(asset?.tag){%>
+                                            <span class="tag-container">
+                                                <span class="tag-round"></span>
+                                                <span class="tag-text">
+                                                    <%= asset?.tag?.name %>
+                                                </span>
+                                            </span>
+                                            <%}else{%>
+                                                -
+                                                <%}%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Assign To</th>
+                                    <td>
+                                        <%= asset?.assignTo?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Assign By</th>
+                                    <td>
+                                        <%= asset?.assignBy?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Assign At</th>
+                                    <td>
+                                        <%= asset?.assignAt || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Assign Asset</th>
+                                    <td>
+                                        <%= asset?.assignAsset?.assetId || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Associate Asset</th>
+                                    <td>
+                                        <%= asset?.associate || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td class="<%= asset.status_class %>">
+                                        <%= asset?.status || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Imported</th>
+                                    <td>
+                                        <%= asset?.isImport || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Last Audit Date</th>
+                                    <td>
+                                        <%= asset?.lastAuditDate || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Action By</th>
+                                    <td>
+                                        <%= asset?.actionBy?.name || "-" %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Action At</th>
+                                    <td>
+                                        <%= asset?.actionAt || "-" %>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <% if (operation !=='delete' ) { %>
+                            <div class="files-section">
+                                <h3>Attached Files</h3>
+                                <p>The following files are attached to this asset:</p>
+                                <div class="preview">
+                                    <% asset?.files?.forEach(function(file, index) { %>
+                                        <img src="cid:image<%= index+1 %>" alt="<%= file?.filename %>">
+                                        <% }); %>
+                                </div>
+                            </div>
+                            <% } %>
+
+                                <p>Thank you for your attention.</p>
+
+                                <div class="footer">
+                                    <p>&copy; 2024 Asset Management System</p>
+                                </div>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #1a73e8;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .asset-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            table-layout: fixed;
+            /* Ensures that the table does not overflow */
+        }
+
+        .asset-table th,
+        .asset-table td {
+            padding: 10px;
+            border: 1px solid #dddddd;
+            text-align: left;
+            font-size: 14px;
+            word-wrap: break-word;
+            /* Prevents overflow of text */
+            overflow: hidden;
+            /* Ensures content stays within the cell */
+        }
+
+        .asset-table th {
+            background-color: #f1f1f1;
+            color: #333333;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888888;
+            margin-top: 20px;
+        }
+
+        .tag-container {
+            display: flex;
+            align-items: center;
+            height: auto;
+        }
+
+        .tag-round {
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #000000;
+        }
+
+        .tag-text {
+            display: flex;
+            align-items: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .email-container {
+                padding: 10px;
+            }
+
+            .asset-table th,
+            .asset-table td {
+                font-size: 12px;
+                /* Smaller font for mobile devices */
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <h2>Today's Expiring Assets</h2>
+        <h3>Hello,</h3>
+        <h4>The following assets are expiring today:</h4>
+
+        <table class="asset-table">
+            <thead>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Asset ID</th>
+                    <th>Warranty Expiry Date</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% assets.forEach(function(asset) { %>
+                    <tr>
+                        <td>
+                            <%= asset?.name || "-" %>
+                        </td>
+                        <td>
+                            <%= asset?.assetId || "-" %>
+                        </td>
+                        <td>
+                            <%= asset?.warrantyExpiryDate || "-" %>
+                        </td>
+                        <td>
+                            <%= asset?.location?.name || "-" %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+
+        <p>Thank you for your attention.</p>
+
+        <div class="footer">
+            &copy; 2024 Asset Management System
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <%if(operation=="expire"){%>Asset Expiration!<%}else{%>Audit Reminder<%}%>
+    </title>
+</head>
+
+<body
+    style="font-family: 'Roboto,RobotoDraft,Helvetica,Arial,sans-serif', Arial, sans-serif; background: #E5E5E5; margin: 0;">
+    <div style="background: #E5E5E5; padding: 50px 15px;">
+        <table
+            style="max-width: 700px; width: 100%; margin: auto; border-top: 4px solid #FFA700; border-spacing: 0; background: #FFF;">
+            <!-- Header Section -->
+            <tr>
+                <td style="padding: 15px 20px; background: #fff;">
+                    <table style="width: 100%; border-bottom: 1px solid #EBECF2; padding-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <h2 style="font-size: 18px; font-weight: bold; color: #1E2538; margin: 0;">Asset
+                                    Management System</h2>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Hero Section -->
+            <tr>
+                <td
+                    style="height: 110px; background-image: url('https://assets.ubsapp.com/emails/Invitation-bg.png'); background-repeat: no-repeat; background-size: cover; background-color: #1E2538;">
+                    <h2 style="font-size: 30px; color: #FFFFFF; text-align: center; margin: 0;">
+                        Audit Reminder
+                    </h2>
+                </td>
+            </tr>
+
+            <!-- Content Section -->
+            <tr>
+                <td style="padding: 20px;">
+                    <h2 style="font-size: 16px; font-weight: 600; color: #1E2538; margin-bottom: 10px;">Hello <%=
+                            user?.name %>,</h2>
+                    <p style="font-size: 14px; color: #73788B;">The following assets are <%if(operation=="expire"){%>
+                            expiring<%}else{%>due for audit<%}%> today:</p>
+
+                    <!-- Asset Table -->
+                    <div style="max-height: 200px; overflow-y: auto;">
+                        <table style="width: 100%; border: 1px solid #E8EAF2; border-spacing: 0; margin-top: 20px;">
+                            <thead style="background: #FAFAFB;">
+                                <tr>
+                                    <th style="padding: 15px; text-align: left; font-weight: 600; color: #1e2538;">Asset
+                                        Name</th>
+                                    <th style="padding: 15px; text-align: left; font-weight: 600; color: #1e2538;">Asset
+                                        ID
+                                    </th>
+                                    <th style="padding: 15px; text-align: left; font-weight: 600; color: #1e2538;">
+                                        Last Audit Date
+                                    </th>
+                                    <th style="padding: 15px; text-align: left; font-weight: 600; color: #1e2538;">
+                                        Location
+                                    </th>
+                                </tr>
+                            </thead>
+                            <!-- Scrollable Tbody -->
+                            <tbody style="max-height: 200px; overflow-y: auto;">
+                                <tr>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name>
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name>
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name>
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name>
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name>
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                    <td
+                                        style="padding: 15px; font-weight: 500; color: rgba(0, 122, 255, 1); border-bottom: 1px solid rgba(232, 234, 242, 1);">
+                                        asset?.name
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </div>
+        </table>
+
+        <p style="font-size: 14px; color: #73788B; margin-top: 20px;">Thank you for your attention.</p>
+        </td>
+        </tr>
+
+        <!-- Footer Section -->
+        <tr>
+            <td style="padding: 20px; text-align: center; font-size: 12px; color: #888888;">
+                &copy; 2020-<%= new Date().getFullYear() %> Asset Management System. Please do not reply to this
+                    email.
+            </td>
+        </tr>
+        </table>
+    </div>
+</body>
+
+</html>

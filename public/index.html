@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Permission Request</title>
+</head>
+
+<body>
+    <button id="performActionBtn">Perform Action</button>
+    <div id="message"></div>
+
+    <script>
+
+        // Flag to track if a notification has been sent
+        let notificationSent = false;
+
+        document.getElementById('performActionBtn').addEventListener('click', () => {
+            if (Notification.permission === "default") {
+                // Request notification permission
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        performAction(); // Proceed with the action
+                    } else {
+                        document.getElementById('message').innerHTML = "<p>Notification permission denied. Please enable notifications to proceed.</p>";
+                    }
+                }).catch(error => {
+                    console.error("Notification permission request failed:", error);
+                    document.getElementById('message').innerHTML = "<p>An error occurred while requesting notification permission. Please try again.</p>";
+                });
+            } else if (Notification.permission === "granted") {
+                // Permission already granted
+                performAction();
+            } else if (Notification.permission === "denied") {
+                // Permission denied
+                document.getElementById('message').innerHTML = "<p>Notification permission denied. Please enable notifications in your browser settings to proceed.</p>";
+            }
+        });
+
+        function performAction() {
+            if (Notification.permission === "granted") {
+                if (!notificationSent) {
+                    const notification = new Notification("Action Completed!", {
+                        body: "You have successfully performed the action.",
+                        icon: "icon.png" // optional
+                    });
+
+                    notification.onclick = () => {
+                        window.open("https://www.youtube.com/", "_blank");
+                    };
+
+                    document.getElementById('message').innerHTML = "<p>Notification sent. Check your notifications.</p>";
+                    notificationSent = true; // Set flag to true to prevent multiple notifications
+                } else {
+                    document.getElementById('message').innerHTML = "<p>Notification has already been sent.</p>";
+                }
+            } else {
+                document.getElementById('message').innerHTML = "<p>Notification permission is no longer granted. Please enable notifications to receive this action.</p>";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.todo-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li .text {
+    flex: 1;
+    margin-right: 10px;
+}
+
+li .actions button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li .actions button:hover {
+    background-color: #c82333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ToDo List</h1>
+            <button id="addTodoBtn">Add ToDo</button>
+        </header>
+        <div class="todo-container">
+            <ul id="todoList">
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const addTodoBtn = document.getElementById('addTodoBtn');
+    const todoList = document.getElementById('todoList');
+
+    // Function to add a new ToDo item
+    function addTodoItem(text) {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span class="text">${text}</span>
+            <div class="actions">
+                <button onclick="removeTodoItem(this)">Remove</button>
+            </div>
+        `;
+        todoList.appendChild(li);
+    }
+
+    // Function to remove a ToDo item
+    function removeTodoItem(button) {
+        const li = button.parentElement.parentElement;
+        todoList.removeChild(li);
+    }
+
+    // Event listener for the "Add ToDo" button
+    addTodoBtn.addEventListener('click', () => {
+        const text = prompt('Enter ToDo item:');
+        if (text) {
+            addTodoItem(text);
+        }
+    });
+});
+
+</script>
+</html> -->
